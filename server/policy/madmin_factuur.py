@@ -184,7 +184,7 @@ def process_factuur(factuur, fac_id):
     emailText = MIMEText(emailContentTemplate % info, 'plain')
 
     if 'vereniging' in factuur:
-        receiver = query_vereniging(factuur['vereniging'])[0]['email']
+        receiver = query_vereniging(factuur['vereniging'])[0]['email'] + ',olympusfacturen@science.ru.nl'
     else:
         receiver = default_receiver
 
