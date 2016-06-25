@@ -187,7 +187,7 @@ def process_factuur(factuur, fac_id):
         receiver = [query_vereniging(factuur['vereniging'])[0]['email']]
     else:
         receiver = []
-
+        
     email = MIMEMultipart()
     email['Subject'] = emailSubjectTemplate % info
     email['To'] = [default_receiver].append(receiver)
